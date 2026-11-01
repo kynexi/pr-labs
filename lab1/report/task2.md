@@ -13,11 +13,11 @@ configuration to avoid serving the file contents from the operating-system
 cache. One run was made per configuration, as allowed by the lab. Raw output
 is in [task2.csv](../results/task2.csv).
 
-| Threads | Time (ms) | Speed-up | Peak memory (MB) | Negative | Positive | Zero | Total | Correct |
-|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | 4,144.3 | 1.00x | 69.5 | 25,005,087 | 24,994,889 | 24 | 50,000,000 | Yes |
-| 2 | 3,665.8 | 1.13x | 113.6 | 25,005,087 | 24,994,889 | 24 | 50,000,000 | Yes |
-| 4 | 3,641.7 | 1.14x | 246.7 | 25,005,087 | 24,994,889 | 24 | 50,000,000 | Yes |
+| Threads | Time (ms) | Speed-up | Peak memory (MB) |   Negative |   Positive | Zero |      Total | Correct |
+| ------: | --------: | -------: | ---------------: | ---------: | ---------: | ---: | ---------: | ------- |
+|       1 |   4,144.3 |    1.00x |             69.5 | 25,005,087 | 24,994,889 |   24 | 50,000,000 | Yes     |
+|       2 |   3,665.8 |    1.13x |            113.6 | 25,005,087 | 24,994,889 |   24 | 50,000,000 | Yes     |
+|       4 |   3,641.7 |    1.14x |            246.7 | 25,005,087 | 24,994,889 |   24 | 50,000,000 | Yes     |
 
 Speed-up is the one-worker time divided by the time for that worker count.
 All runs produced the reference totals from `verify`.
@@ -48,8 +48,9 @@ buffers concurrently, whereas one worker holds only one at a time.
 - RAM: 27.8 GiB
 - Internal disk: WD PC SN740 NVMe SSD
 - USB drive: Kingston DataTraveler 3.0, approximately 64 GB, mounted as `K:`
-- OS: Windows 10 Pro (build 26200)
+- OS: Windows 11 Pro (build 26200)
 - Runtime: .NET 8.0.412
 
-The drive reports USB as its bus type. Its exact negotiated USB speed and the
-port version were not confirmed.
+The drive reports USB as its bus type and is identified as a DataTraveler 3.0.
+Windows lists AMD USB 3.10 host controllers. The exact negotiated link speed
+was not confirmed.
