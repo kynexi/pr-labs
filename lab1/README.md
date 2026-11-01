@@ -55,6 +55,10 @@ it. Run `unsync` three times and `lock` and `local` once each to collect the
 required measurements. The recorded measurements and answers are in
 [report/task1b.md](report/task1b.md).
 
+Task 1a reads disjoint file ranges, while Task 1c uses a bounded producer–
+consumer queue. Their benchmark results and analysis are in
+[report/task1a-task1c.md](report/task1a-task1c.md).
+
 Task 2 reads each assigned file into one byte buffer. Copy the eight split
 files to the USB drive, then pass that drive directory with `--dir`; eject and
 reconnect the drive before each timed run to avoid cached reads. The
