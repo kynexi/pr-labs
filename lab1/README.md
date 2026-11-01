@@ -55,5 +55,11 @@ it. Run `unsync` three times and `lock` and `local` once each to collect the
 required measurements. The recorded measurements and answers are in
 [report/task1b.md](report/task1b.md).
 
+Task 2 reads each assigned file into one byte buffer. Copy the eight split
+files to the USB drive, then pass that drive directory with `--dir`; eject and
+reconnect the drive before each timed run to avoid cached reads. The
+implementation notes and current measurement status are in
+[report/task2.md](report/task2.md).
+
 For benchmarks, run the built binary directly (avoids `dotnet run` overhead):
 `./bin/Release/net8.0/lab1 run --task 1a --threads 8`
