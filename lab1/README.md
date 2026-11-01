@@ -49,5 +49,11 @@ dotnet run -c Release -- run --task 1c --threads 4
 dotnet run -c Release -- run --task 2  --threads 2 --dir /Volumes/USB
 ```
 
+Task 1b loads `numbers.txt` into memory before starting the timer. Its default
+thread count is the number of logical processors; set `--threads` to override
+it. Run `unsync` three times and `lock` and `local` once each to collect the
+required measurements. The recorded measurements and answers are in
+[report/task1b.md](report/task1b.md).
+
 For benchmarks, run the built binary directly (avoids `dotnet run` overhead):
 `./bin/Release/net8.0/lab1 run --task 1a --threads 8`
